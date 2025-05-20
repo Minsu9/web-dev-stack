@@ -1,0 +1,26 @@
+body {
+  background: lightblue;
+}
+.radius-box {
+  width: 180px;
+  height: 200px;
+  background: lightblue;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  margin: auto;
+  border: 2px solid;
+}
+.radius1 {
+  border-radius: 10px;
+}
+.radius-box1 {
+  width: 150px;
+  height: 30px;
+  background: lightblue;
+  color: white;
+  line-height: 2;
+  text-align: center;
+  margin: auto;
+  border: 2px solid;
+}
