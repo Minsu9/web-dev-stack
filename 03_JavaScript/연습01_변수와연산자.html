@@ -6,14 +6,27 @@
     <title>변수 & 연산자 연습문제</title>
   </head>
   <body>
+    <!-- 
+      변수 명명 규칙
+      1) 문자, 숫자, 기호는 $, _만 사용
+      2) 첫글자에는 숫자 금지
+      3) 예약어(const, if, switch...) 금지 
+      4) 표기법대로 사용 - camelCase(낙타표기법) user id
+      5) 상수(const로 표시한 것 X)는 대문자 = snake_case(언더바 표기법) 
+    -->
     <h1>변수 & 연산자 연습문제</h1>
     <ol style="line-height: 2">
       <li>
         킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오. (1kg = 2.2lb)
         <script>
           const kg = 60;
-          // Q1: 여기에 코드를 작성하세요
           console.log(kg * 2.2);
+          // 정답~
+          // 추가적인 방법
+          /* const kg = 60;
+             const lb = kg * 2.2;
+             console.log(lb);
+          */
         </script>
       </li>
 
@@ -21,8 +34,13 @@
         제곱미터(㎡)를 평(평수)으로 환산하여 출력하시오. (1㎡ = 0.3평)
         <script>
           const m2 = 99;
-          // Q2: 여기에 코드를 작성하세요
           console.log(m2 * 0.3);
+          //
+          /*
+           const m2 = 99;
+           const py = m2 * 0.3;
+           console.log(py);
+        */
         </script>
       </li>
 
@@ -32,8 +50,14 @@
           const upper = 10;
           const lower = 14;
           const height = 4;
-          // Q3: 여기에 코드를 작성하세요
           console.log(((upper + lower) / 2) * height);
+          // 밑 정답
+          /* const upper = 10;
+           const lower = 14;
+           const height = 4;
+           const area = ((upper + lower) / 2) * height;
+           console.log(area)\
+        */
         </script>
       </li>
 
@@ -43,8 +67,13 @@
           const money = 12000000;
           const persent = 0.04;
           const month = 12;
-          // Q4: 여기에 코드를 작성하세요
           console.log(money / month / present);
+          // 밑 정답
+          /* const money = 12000000;
+           const persent = 0.04;
+           const monthly = (monet * persent) / 12;
+           console.log(monthly);
+        */
         </script>
       </li>
 
@@ -52,9 +81,14 @@
         올해가 2025년일 때, 나이(예: 55)를 기준으로 출생연도를 계산하시오.
         <script>
           const age = 55;
-          const ty = 2025;
-          // Q5: 여기에 코드를 작성하세요
-          console.log(ty - age);
+          const year = 2025;
+          console.log(year - age);
+          // 밑 정답
+          /* const year = 2025;
+           const age = 55;
+           const birth = year - age + 1;
+           console.log(birth);
+        */
         </script>
       </li>
 
@@ -64,8 +98,14 @@
         <script>
           const ia = 5500;
           const money1 = 15000;
-          // Q6: 여기에 코드를 작성하세요
-          // ??
+          // 밑 정답
+          /* const ia = 5500;
+           const money1 = 15000;
+           const cups = money1 / ia
+           const change = money % price; or    let change = money % price;
+                                               change = money - price * cups;
+           console.log(`${cups}잔, 잔돈, ${change}원`);
+        */
         </script>
       </li>
 
@@ -75,30 +115,47 @@
         <script>
           const sheep = 12000;
           const drink = 2000;
-          // Q7: 여기에 코드를 작성하세요
           console.log(sheep * 64 + drink * 6);
           // 10인분에 음료 1개 서비 총 음료 6개 서비스 변수 표현을 어떻게 써야할지 잘모르겠어요 (이해력 부족)
+          // 밑 정답
+          /* const sheep = 12000;
+           const drink = 2000;
+           const sheepNumber = 64;
+           const drinkNumber = 6;
+           const service = parseInt(sheepNumber / 10); // 6
+           const total = sheep * sheepNumber + drink * (drinkNumber - service);
+           console.log(total);
+        */
         </script>
       </li>
 
       <li>
         두 자리 정수(예: 73)의 각 자릿수를 더한 값을 구하시오. (7 + 3 = 10)
         <script>
-          const ten 7;
-          const one 3;
-          // Q8: 여기에 코드를 작성하세요
-          console.log(ten + one);
+            const ten = 7;
+            const one = 3;
+            console.log(ten + one);
+          // 밑 정답
+          /* const number = 73;
+             const ten = parseInt(number / 10);
+             const one = number % 10;
+             const sum = ten + one;
+             console.log(sum);
         </script>
       </li>
 
       <li>
         이름, 나이, 취미를 변수로 저장한 후 소개 문장을 console에 출력하시오.
         <script>
-          const name 박민수;
-          const age2 27;
-          const hobby game;
-          // Q9: 여기에 코드를 작성하세요
-          // 이해력 부족으로 인한 출력 실패 ㅠ
+            const name = "박민수";
+            const age2 = 27;
+            const hobby = "게임";
+            // 이해력 부족으로 인한 출력 실패 ㅠ
+          // 밑 정답
+          /* const name = "박민수";
+             const age2 = 27;
+             const hobby = "게임";
+             console.log( 저는 ${name}이고, 나이는 ${age}, 취미는 ${hobby}');
         </script>
       </li>
 
@@ -106,11 +163,15 @@
         문자열 "100"과 숫자 100의 비교 결과를 `==`와 `===`로 비교하고 결과를
         console에 출력하시오.
         <script>
-          const a 100;
-          const b "100";
-          // Q10: 여기에 코드를 작성하세요
-          console.log(a == b);
-          console.log(a === b);
+            const a = 100;
+            const b = "100";
+            console.log(a == b);
+            console.log(a === b);
+          // 밑 정답
+          /* const a = "100";
+             const b = 100;
+             console.log(a == b);
+             console.log(a === b);
         </script>
       </li>
     </ol>
