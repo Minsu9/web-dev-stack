@@ -24,12 +24,13 @@
       <li>
         필기/실기 시험 모두 80점 이상이면 '합격', 아니면 '불합격'을 출력하시오.
         <script>
-          // Q2: 여기에 코드를 작성하세요
-          pass = prompt("본인의 점수를 입력해주세요");
-          if (pass >= 80) {
-            console.log("합격 입니다");
+          console.log("------Q2 ---------------");
+          const score1 = 80;
+          const score2 = 86;
+          if (score1 >= 80 && score2 >= 80) {
+            console.log("합격");
           } else {
-            console.log("불합격 입니다");
+            console.log("불합격");
           }
         </script>
       </li>
@@ -37,8 +38,9 @@
       <li>
         <!-- 정수가 10과 20 사이인지 판별하시오. -->
         <script>
-          // Q3: 여기에 코드를 작성하세요
-          // if ()
+          console.log("------ Q3 ----------------");
+          const number = 13;
+          if
         </script>
       </li>
 
@@ -46,12 +48,12 @@
         나이가 65세 이상 또는 8세 미만이면 '무료', 아니면 '10,000원'을
         출력하시오.
         <script>
-          // Q4: 여기에 코드를 작성하세요
-          age = prompt("나이를 입력 해주세요");
-          if (age >= 65 && age < 8) {
+          console.log("------ Q4 ---------------");
+          const age = 20;
+          if (age >= 65 || age < 8) {
             console.log("free");
           } else {
-            console.log("10000원");
+            console.log("10,000원");
           }
         </script>
       </li>
@@ -73,6 +75,41 @@
           } else {
             console.log("잘못된 입력하였습니다");
           }
+          /*
+             console.log("------ Q5 -------------")
+             const month = Number(prompt("몇 월입니까? (숫자만 입력해주세요)"));
+             if (3 <= month && month <= 5) {
+                console.log("봄");
+             } else if (6 <= month && month <= 8) {
+                console.log("여름");
+             } else if (9 <= month && month <= 11) {
+                console.log("가을");
+             } else if (month === 12 || month === 1 || month === 2) {
+                console.log("겨울");
+             }
+
+             switch(month) {
+               case 3:
+               case 4:
+               case 5:
+                 console.log("봄");
+                 break;
+               case 6:
+               case 7:
+               case 8:
+                 console.log("여름");
+                 break;
+               case 9:
+               case 10:
+               case 11:
+                 console.log("가을");
+                 break;
+               case 12:
+               case 1:
+               case 2:
+                 console.log("겨울");
+                 break;
+             }
         </script>
       </li>
 
@@ -93,6 +130,20 @@
           } else {
             console.log("F");
           }
+          /*
+            console.log("------ Q6 -----------")
+            const score3 = 95;
+            if (90 <= score3 && score3 <= 100) {
+              console.log("A");
+            } else if (80 <= score3 ) {
+              console.log("B");
+            } else if (70 <= score3 ) {
+              console.log("C");
+            } else if (60 <= score3 ) {
+              console.log("D");
+            } else {
+              console.log("F");
+            }
         </script>
       </li>
 
@@ -118,13 +169,51 @@
           } else {
             console.log("맞는 입력 방식이 아닙니다");
           }
+          /*
+             const number2 = Number(prompt("숫자를 입력하세요"));
+             let day;
+             if (number2 === 1) day = "월";
+             else if (number2 === 2) day = "화";
+             else if (number2 === 3) day = "수";
+             else if (number2 === 4) day = "목";
+             else if (number2 === 5) day = "금";
+             else if (number2 === 6) day = "토";
+             else if (number2 === 7) day = "일";
+
+             if (day !== undefined) console.log('${day}요일')
+             else alert("숫자를 잘못 입력하셨습니다. 1~7까지 입력해주세요");
+
+             // 배열
+             const days = ["월 , 화 , 수 , 목 , 금 , 토 , 일"];
+             // days [0] : 월, number2 : 1
+             // days [1] : 화, number2 : 2
+             const result = days[number2 - 1];
+             console.log('${result !== undrtfined ? result + "요일" : ""}`);
         </script>
       </li>
 
       <li>
         두 수와 연산자를 입력받아 사칙연산 결과를 출력하시오.
         <script>
-          // Q8: 여기에 코드를 작성하세요
+          const num1 = Number(prompt("숫자1 입력"));
+          const num2 = Number(prompt("숫자2 입력"));
+          const op = prompt("연산자 입력");
+          let result2;
+          switch (op) {
+            case "+":
+              result2 = num1 + num2;
+              break;
+            case "-":
+              result2 = num1 - num2;
+              break;
+            case "*":
+              result2 = num1 * num2;
+              break;
+            case "/":
+              result2 = num1 / num2;
+              break;
+          }
+          console.log("${num1} ${op} ${num2} = ${result2}");
         </script>
       </li>
 
@@ -144,12 +233,23 @@
           } else {
             console.log("비밀번호 오류");
           }
+
+          /*
+             const id2 = "id1234";
+             const pw = "pw1234";
+             if (id2 === "id1234" && )
         </script>
       </li>
       <li>
         3개의 수 중 가장 큰 수를 출력하시오.
         <script>
-          // Q10: 여기에 코드를 작성하세요
+          const num3 = 96;
+          const num4 = 86;
+          const num5 = 101;
+          let max = num3;
+          if (max < num4) max = num4;
+          if (max < num5) max = num5;
+          console.log("최대값 : ", max);
         </script>
       </li>
 
@@ -157,21 +257,50 @@
         정수 하나가 3의 배수인지, 5의 배수인지, 둘 다인지, 아니면 어떤 것도
         아닌지 판별하시오.
         <script>
-          // Q11: 여기에 코드를 작성하세요
+          const number3 = 36;
+          if (number3 % 3 === 0) {
+            if (number3 % 5 === 0) {
+              console.log("둘 다!");
+            } else {
+              // 3의 배수 0, 5의 배수 X
+              console.log("3의 배수!");
+            }
+          } else {
+            // 3의 배수 X, 5의 배수 X
+            console.log("둘 다 아님!");
+          }
+
+          if (number3 % 3 === 0 && number3 % 5 === 0) {
+            console.log("둘 다!");
+          } else if (number3 % 3 === 0) {
+            console.log("3의 배수");
+          } else if (number3 % 5 === 0) {
+            console.log("5의 배수");
+          } else {
+            console.log("둘 다 아님!");
+          }
         </script>
       </li>
 
       <li>
         점수가 0~100 사이인지 아닌지 판별하시오.
         <script>
-          // Q12: 여기에 코드를 작성하세요
+          const number4 = 87;
+          if (0 < number4 && number4 < 100) {
+            console.log("0~100 사이");
+          } else {
+            console.log("0~100 사이가 아니다");
+          }
         </script>
       </li>
 
       <li>
         4자리 정수가 주어졌을 때, 첫 번째 자리수가 짝수인지 홀수인지 판별하시오.
         <script>
-          // Q13: 여기에 코드를 작성하세요
+          const number5 = 1032;
+          const first = parseInt(number5 / 1000);
+          if (first % 2 === 0) console.log("짝수");
+          else console.log("홀수");
         </script>
       </li>
     </ol>
