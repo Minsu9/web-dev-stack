@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const inputResult = document.querySelector("#inputResult");
   input.addEventListener("input", (e) => {
     console.log(e.target.value);
-    inputResult.innerHTML = e.targer.value;
+    inputResult.innerHTML = e.targer.value();
   });
 
   // select 선택값 출력
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const selectResult = document.querySelector("#selectResult");
   select.addEventListener("change", (e) => {
     console.log(e.targer.value);
-    selectResult.textContent = e.targer.value;
+    selectResult.textContent = e.targer.value();
   });
 
   const form = document.querySelector("#form");
