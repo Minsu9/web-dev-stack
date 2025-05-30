@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 예제</title>
+    <link rel="stylesheet" href="실습07_회원가입(teh)2.js" />
+  </head>
+  <body>
+    <h1>로그인</h1>
+    <div id="form">
+      <div>
+        <input type="text" id="username" placeholder="이름을 입력해주세요" />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="password"
+          placeholder="비밀번호를 입력해주세요"
+        />
+      </div>
+      <button id="loginBtn" onclick="setLocal()" type="button">로그인</button>
+      <button onclick="getLocal()" type="button">정보 확인</button>
+      <button onclick="removeLocal()" type="button">아이템 제거</button>
+      <button onclick="clearLocal()" type="button">전체 삭제</button>
+    </div>
+    <script>
+      const setLocal = () => {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        // localStorage에 저장
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+        alert("로컬스토리지에 저장되었습니다.");
+      };
+      const getLocal = () => {
+        const username = localStorage.getItem("username");
+        const password = localStorage.getItem("password");
+        alert(`저장된 정보\n이름: ${username}\n비밀번호: ${password}`);
+      };
+      const removeLocal = () => {
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
+        alert("저장된 로그인 정보가 제거되었습니다.");
+      };
+      const clearLocal = () => {
+        localStorage.clear();
+        alert("로컬스토리지를 전체 삭제했습니다.");
+      };
+    </script>
+  </body>
+</html>
