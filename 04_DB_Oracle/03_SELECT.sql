@@ -70,7 +70,68 @@ SELECT
 FROM USER_INFO;
 
 -- EMPLOYEE에서 직원명(EMP_NAME), 월급(SALARY), 연봉 조회
-SELECT EMP_NAME, SALARY, SALARY * 12 연봉 FROM EMPLOYEE; 
+SELECT EMP_NAME, SALARY, SALARY * 12 연봉 
+FROM EMPLOYEE;
+
+/*
+    리터럴(문자열)
+    - SELECT 절에 리터럴을 사용하면 테이블에 
+                                     존재하는 데이터처럼 조회 가능
+    - 즉, 리터럴은 RESULT SET의 모든 행에 반복적으로 출력
+    
+    연결 연산자 : ||
+    - 여러 컬럼값들을 마치 하나의 컬럼인것처럼 연결
+    - 컬럼값과 리터럴도 연결할 수 있음
+*/
+-- USER_INFO에서 이름(NAME), 나이(AGE), 단위(살) 조회
+SELECT NAME, AGE || '살' AS 나이 FROM USER_INFO;
+
+-- USER_INFO에서 이름(NAME)의 MBTI는 XXXX입니다 조회
+SELECT 
+   NAME || '의 MBTI는' || MBTI || '입니다' AS MBTI 
+FROM USER_INFO;
+
+/*
+    DISTINCT
+    - 컬럼에 중복된 값들을 한번식만 표시하고자 할 때 씀
+    - 주의사항 : DISTINCT는 SELECT절에서 한 번만 기술 가능
+*/
+-- USER_INFO에서 나이(AGE)가 중복되지 않게 조회
+SELECT DISTINCT AGE FROM USER_INFO;
+
+-- USER_INFO에서 MBTI 중복되지 않게 조회
+SELECT DISTINCT MBTI FROM USER_INFO;
+
+-- SELECT DISTINCT AGE, DISTINCT MBTI FROM USER_INFO 쓸 수 없는 예시
+
+/*
+      WHERE 절
+      
+      SELECT 컬럼, 컬럼, ...
+      FROM 테이블명
+      WHERE 조건식;
+      
+      - 조회 하고자 하는 테이블로부터 "특정 조건"에 
+                           만족하는 데이터만 조회하고자 할 때
+      - 이때 WHERE절에 조건식 제시
+      - 조건식에는 다양한 연산자 사용 가능
+      
+      비교 연산자
+      = : 같음
+      !=, <> : 같지 않음
+      >, <, >=, <= : 대소 비교
+*/
+-- USER_INFO에서 나이가 30이상인 
+-- 이름(NAME), 나이(AGE), 생년월일(BIRTHDATE)
+SELECT NAME, BIRTHDATE
+FROM USER_INFO
+WHERE AGE >= 30;
+-- EMPLOYEE에서 부서코드(DEPT_CODE)가 
+--                   'D9'인 사원들 (모든 컬럼) 조회
+SELECT *
+FROM EMPLOYEE
+WHERE DEPT_CODE = 'D9';
+
 
 
 
